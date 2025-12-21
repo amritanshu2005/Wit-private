@@ -1,209 +1,247 @@
-🛡️ iCivic Guardian
-AI-Powered Digital Watchdog for Smart & Safe Cities
+# 🛡️ iCivic Guardian
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-green.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109-teal.svg)](https://fastapi.tiangolo.com/)
+
+**AI-Powered Digital Watchdog for Smart & Safe Cities**
+
+> "From reporting civic issues to predicting them — iCivic Guardian transforms citizens into guardians of their city."
+
+![iCivic Guardian](https://img.shields.io/badge/Hackathon-Ready-orange?style=for-the-badge)
+
+---
+
+## 🚀 About
+
+iCivic Guardian is a next-generation **AI + MERN** based civic-tech platform that empowers citizens to report, track, and resolve civic issues while helping governments predict, prioritize, and prevent problems before they escalate.
+
+### Key Differentiators
+
+- 🤖 **AI-Powered Analysis** - Automatic issue categorization and priority scoring
+- 🗺️ **Interactive Maps** - Geo-tagged complaints with real-time visualization
+- 👥 **Community Verification** - Crowdsourced validation of reports
+- 📊 **Predictive Analytics** - Hotspot detection and future issue forecasting
+- 🏆 **Gamification** - Civic points and badges for active participation
+
+---
+
+## 🎯 Features
+
+### 👥 Citizen Portal
+- 📸 AI-based Issue Reporting (Image/Text)
+- 🧠 Auto Categorization (Road, Water, Electricity, Safety, Waste)
+- 📍 Geo-tagged Complaints with Address Detection
+- 📊 Live Status Tracking
+- 🗳️ Community Upvote & Verification System
+- 🏆 Gamified Civic Points & Badges
+
+### 🏛️ Authority Dashboard
+- 📈 Real-time Complaint Analytics
+- 🚨 AI Priority Scoring System
+- 🔮 Predictive Issue Heatmaps
+- 🧾 Performance & SLA Monitoring
+- 🤖 Auto Routing to Departments
+
+### 🧠 AI/ML Capabilities
+- 🖼️ Image Classification (CNN)
+- 📝 NLP for Complaint Understanding (Gemini API)
+- 📊 ML-based Priority Prediction
+- 🔍 Fake/Duplicate Complaint Detection
+- 🌆 KMeans Hotspot Clustering
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | React 19, Tailwind CSS, Framer Motion, Leaflet Maps, Recharts |
+| **Backend** | Node.js, Express.js, MongoDB (GeoSpatial), JWT Auth |
+| **AI/ML** | Python, FastAPI, Scikit-learn, Gemini API |
+| **DevOps** | Docker, Docker Compose |
+
+---
+
+## 📦 Project Structure
+
+```
+iCivic-Guardian/
+├── client/                    # React Frontend
+│   ├── src/
+│   │   ├── components/        # Reusable components
+│   │   ├── pages/             # Page components
+│   │   ├── context/           # React Context
+│   │   └── services/          # API services
+│   └── package.json
+│
+├── server/                    # Node.js Backend
+│   ├── models/                # Mongoose models
+│   ├── routes/                # API routes
+│   ├── middleware/            # Auth middleware
+│   └── package.json
+│
+├── ai-engine/                 # Python FastAPI
+│   ├── services/              # ML services
+│   ├── main.py                # FastAPI app
+│   └── requirements.txt
+│
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 20+
+- Python 3.11+
+- MongoDB (local or Atlas)
+- Gemini API Key (optional, for NLP features)
 
-“From reporting civic issues to predicting them — iCivic Guardian transforms citizens into guardians of their city.”
+### Option 1: Docker (Recommended)
 
-🚀 About the Project
-
-iCivic Guardian is a next-generation AI + MERN based civic-tech platform that empowers citizens to report, track, and resolve civic issues while helping governments predict, prioritize, and prevent problems before they escalate.
-
-Unlike traditional complaint portals, iCivic Guardian combines AI/ML intelligence, real-time analytics, and community-driven verification to create a transparent, fast, and accountable civic ecosystem.
-
-This project is designed to be hackathon-ready, scalable, and impactful, making it perfect for Smart City, GovTech, AI, Sustainability, and Social Impact hackathons.
-
-🌍 Problem Statement
-
-Modern cities face major challenges:
-
-🚧 Delayed response to civic issues
-
-📉 Lack of transparency & accountability
-
-🗂️ Manual complaint triaging
-
-❌ Fake / duplicate complaints
-
-🔮 No predictive insights
-
-Result: Citizen frustration + inefficient governance.
-
-💡 Our Solution
-
-iCivic Guardian introduces an AI-driven civic intelligence layer that:
-
-Automates issue classification & prioritization
-
-Verifies complaints using AI + community trust
-
-Predicts future problem hotspots
-
-Provides real-time dashboards for authorities
-
-🧠 Core Features
-👥 Citizen Side
-
-📸 AI-based Issue Reporting (Image/Text/Voice)
-
-🧠 Auto Categorization (Road, Water, Electricity, Safety, Waste)
-
-📍 Geo-tagged Complaints
-
-📊 Live Status Tracking
-
-🗳️ Community Upvote & Verification System
-
-🏆 Gamified Civic Points & Badges
-
-🏛️ Authority Dashboard
-
-📈 Real-time Complaint Analytics
-
-🚨 AI Priority Scoring System
-
-🔮 Predictive Issue Heatmaps
-
-🧾 Performance & SLA Monitoring
-
-🤖 Auto Routing to Departments
-
-🧠 AI/ML Layer
-
-🖼️ Image Classification (CNN)
-
-📝 NLP for Complaint Understanding
-
-📊 ML-based Priority Prediction
-
-🔍 Fake/Duplicate Complaint Detection
-
-🌆 Future Issue Forecasting
-
-🛠️ Tech Stack
-🌐 Frontend
-
-React.js
-
-Tailwind CSS
-
-Framer Motion (vibe animations)
-
-Mapbox / Leaflet (Geo Visualization)
-
-⚙️ Backend
-
-Node.js
-
-Express.js
-
-MongoDB (GeoSpatial Indexing)
-
-JWT Authentication
-
-🤖 AI / ML
-
-Python (FastAPI microservice)
-
-TensorFlow / PyTorch
-
-Scikit-learn
-
-OpenCV
-
-Hugging Face NLP Models
-
-☁️ DevOps & Tools
-
-Docker
-
-GitHub Actions
-
-Firebase / AWS / GCP
-
-Postman
-
-🧩 System Architecture
-Citizen App (React)
-       |
-       v
-Node + Express API
-       |
-       v
-MongoDB (Geo + Logs)
-       |
-       +----> AI/ML Engine (FastAPI)
-       |
-       v
-Authority Dashboard
-
-🔮 AI Models Used
-Model	Purpose
-CNN	Issue detection from images
-NLP Transformer	Complaint intent extraction
-Random Forest	Priority prediction
-Clustering (KMeans)	Hotspot detection
-Anomaly Detection	Fake complaint filtering
-🏆 Why This Wins Hackathons
-
-✅ Real-world Impact
-✅ AI + Full Stack Depth
-✅ Scalable for Smart Cities
-✅ Strong Problem-Solution Fit
-✅ Clear Monetization & Adoption Path
-✅ Live Demo Friendly
-
-Judges don’t just see an app — they see a deployable civic platform.
-
-💰 Future Monetization (GovTech Ready)
-
-🏛️ Government SaaS Licensing
-
-🌆 Smart City Integrations
-
-📊 Premium Analytics for Municipal Bodies
-
-🤝 CSR & NGO Partnerships
-
-🚧 Future Enhancements
-
-🔗 Blockchain-based complaint immutability
-
-🧠 Reinforcement Learning for auto-decision making
-
-📱 Mobile App (React Native)
-
-🗣️ Multilingual AI Assistant
-
-🛰️ IoT Sensor Integration
-
-🧪 Installation & Setup
+```bash
 # Clone the repository
 git clone https://github.com/your-username/iCivic-Guardian.git
+cd iCivic-Guardian
 
-# Frontend
-cd client
-npm install
-npm start
+# Set environment variables
+export GEMINI_API_KEY=your-api-key
 
-# Backend
+# Start all services
+docker-compose up --build
+```
+
+### Option 2: Manual Setup
+
+#### 1. Backend Server
+
+```bash
 cd server
 npm install
+
+# Create .env file
+cp .env.example .env
+# Edit .env with your MongoDB URI
+
+# Seed demo data
+npm run seed
+
+# Start server
 npm run dev
+```
 
-# AI Service
+#### 2. AI Engine
+
+```bash
 cd ai-engine
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload
 
-📸 Demo & Screenshots
+# Create .env file
+cp .env.example .env
+# Add your GEMINI_API_KEY
 
-Coming Soon — Live Hackathon Demo
+# Start AI server
+uvicorn main:app --reload --port 8000
+```
 
-🤝 Team & Contribution
+#### 3. Frontend
 
-Built with ❤️ by passionate developers who believe technology can fix cities.
+```bash
+cd client
+npm install
+npm run dev
+```
 
-Contributions, ideas, and collaborations are welcome!
+### Access the Application
 
-📜 License
+| Service | URL |
+|---------|-----|
+| Frontend | http://localhost:5173 |
+| Backend API | http://localhost:5000 |
+| AI Engine | http://localhost:8000 |
+| API Docs | http://localhost:8000/docs |
+
+---
+
+## 🔐 Demo Accounts
+
+After running the seed script:
+
+| Role | Email | Password |
+|------|-------|----------|
+| Citizen | citizen@demo.com | demo123 |
+| Authority | authority@demo.com | demo123 |
+
+---
+
+## 📡 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login
+- `GET /api/auth/profile` - Get user profile
+
+### Issues
+- `GET /api/issues` - Get all issues (with filters)
+- `POST /api/issues` - Create new issue
+- `GET /api/issues/:id` - Get issue details
+- `POST /api/issues/:id/upvote` - Upvote issue
+- `POST /api/issues/:id/verify` - Verify issue
+
+### Analytics (Authority)
+- `GET /api/analytics/stats` - Dashboard statistics
+- `GET /api/analytics/heatmap` - Heatmap data
+- `GET /api/analytics/priority-queue` - Priority queue
+
+### AI Engine
+- `POST /analyze-image` - Analyze issue image
+- `POST /analyze-text` - Analyze complaint text
+- `POST /predict-priority` - Predict issue priority
+- `POST /detect-duplicate` - Check for duplicates
+- `POST /get-hotspots` - Get clustered hotspots
+
+---
+
+## 🏆 Why This Wins Hackathons
+
+✅ **Real-world Impact** - Solves actual civic problems  
+✅ **AI + Full Stack Depth** - Demonstrates technical expertise  
+✅ **Scalable Architecture** - Production-ready design  
+✅ **Strong Problem-Solution Fit** - Clear value proposition  
+✅ **Live Demo Ready** - Working end-to-end flow  
+✅ **Beautiful UI/UX** - Premium, polished interface  
+
+---
+
+## 🚧 Future Roadmap
+
+- 🔗 Blockchain-based complaint immutability
+- 🧠 Reinforcement Learning for auto-decision making
+- 📱 Mobile App (React Native)
+- 🗣️ Multilingual AI Assistant
+- 🛰️ IoT Sensor Integration
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+## 📜 License
 
 MIT License © 2025 iCivic Guardian
+
+---
+
+<p align="center">
+  Built with ❤️ for smarter, safer cities
+</p>
